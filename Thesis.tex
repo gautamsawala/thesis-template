@@ -5,7 +5,7 @@
 %% ---------------------------------------------------------------- 
 
 % Set up the document
-\documentclass[a4paper, 11pt, twoside]{Thesis}  % Use the "Thesis" style defined in Thesis.cls
+\documentclass[a4paper, 11pt, twoside, openany]{Thesis}  % Use the "Thesis" style defined in Thesis.cls
 \graphicspath{{./Figures/}}  % Location of the graphics files (set up for graphics to be in PDF format)
 \setchapterpath{./Chapters/}
 \setappendixpath{./Appendices/}
@@ -26,6 +26,7 @@
 \usepackage{framed}
 \usepackage{hyperref}
 \usepackage{todonotes}
+\usepackage{graphicx}
 \reversemarginpar
 \presetkeys{todonotes}{inline, size=\tiny, prepend, caption={TODO}}{}
 \usepackage{listings}
@@ -39,16 +40,16 @@
 \setboolean  {proposal}{false} % disables all stuff that is not needed for a proposal if set to true
 \university  {Saarland University}{http://www.uni-saarland.de/}
 \department  {Department of Computer Science}{http://www.cs.uni-saarland.de/}
-\group       {Software Engineering Chair}{http://www.st.cs.uni-saarland.de/}
+\group       {juris-Stiftungsprofessur für Rechtsinformatik}{https://www.uni-saarland.de/lehrstuhl/sorge.html}
 \faculty     {Faculty of Natural Sciences and Technology I}{http://www.uni-saarland.de/en/campus/faculties/faculties/faculty-6-natural-sciences-and-technology-i.html}
-\supervisor  {Your Supervisor}
-\advisor     {Your Advisor}
-\examiner    {Who will be grading your thesis}
-\secondexaminer {The second person grading your thesis}
+\supervisor  {Prof. Dr. Christoph Sorge}
+\advisor     {Aljoscha Dietrich, M.Sc.}
+\examiner    {Prof. Dr. Christoph Sorge}
+\secondexaminer {Aljoscha Dietrich, M.Sc.}
 \degree      {Master of Science}
 \thesiskind  {Master Thesis}
-\authors     {Your name}
-\thesistitle {The title of your thesis}
+\authors     {Gautam Sawala}
+\thesistitle {Privacy implications of wearable devices – identification of short movies utilizing physiological data}
 \date        {\today}
 %\subject     {}
 %\keywords    {}
@@ -158,11 +159,12 @@ Thx Mom+Dad $<3$
 % Include the chapters of the thesis, as separate files (careful of case-sensitivity and spaces in filenames)
 % Capitalized chaptertitles generally look better
 
-\loadchapter{Introduction}{This is a Chapter title}
+\loadchapter{Introduction}{Introduction}
 \loadchapter{Motivation}{Motivation}
+\loadchapter{Terminology}{Terminology}
+\loadchapter{Data_Collection}{Data Collection}
 
 
-\clearpage
 
 %% Appendices
 %% ----------------------------------------------------------------
