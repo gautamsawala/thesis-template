@@ -1,0 +1,89 @@
+%!TEX root = ../Thesis.tex
+
+The earliest studies connecting the physiological response to external stimuli can be dated back to 1886. Charles F\'er\'e was the first person to study the effect of sensory stimulation and emotional arousal on muscle tension. The subjects were asked to grip a dynamometer while a stimulus was presented to them. F\'er\'e noticed that the strength of the subjects increased significantly under the stimuli than while resting. A range of stimuli like sound, pain and tactile stimulation were induced to the subjects. Thus F\'er\'e proposed that the stimuli elicit a 'psychic energy' which in turn activates effector systems (now known as Autonomic Nervous System) in proportion its intensity. After receiving critical comments from Vigouroux and d'Arsonval, F\'er\'e repeated the experiment while he grounded the subject, imposed a galvanic current and presented the same stimuli to the subject, determining the increase in current flow due to discrete stimuli. This was the first study done on Galvanic Skin Response (GSR), today also known as Electrodermal Activity (EDA) \cite{neumann_early_1970}.
+
+\section{Emotion Recognition} \label{sec:emo_rec} The discovery of co-relation between Electrodermal Activity (EDA) and external stimuli several studies have been conducted to understand the effect of other physiological signals. These studies have focused on emotion elicitation using Mood Induction Procedures (MIP) \cite{gross_emotion_1995}. Videos, music or images are used to elicit emotions, while the related physiological data is recorded. The emotion states are then classified by extracting features from the recorded physiological data using classifier. We summarize the related studies done in the Table \ref{tab:lr_emotional recognition}.
+
+\paragraph{} In the literature we reviewed different stimuli like music \cite{kim_emotion_2008} , images \cite{kanade_emotion_2004} \cite{kordic_emotion_2010}, movie clips \cite{lisetti_using_2004} \cite{wan_wen_2009} \cite{schulze_cnn_2016}, cognitive tasks and questionnaires \cite{grimm_bimodal_2007} were utilized as stimuli. Though using images as stimuli is easy and quick, the drawback of utilizing images is that they might not be able to evoke strong emotions. Using music to induce emotion is highly standardized and simple. The emotion can be evoked over time (15-20 min). However, the disadvantage of using music is that user's preferences vary largely and hence influence the emotion experienced.
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ |c|c|c|c|c|c|c|c| }
+\hline
+\multirow{2}{2em}{Ref. No.} & Physiological & Features & Classifiers & Emotional & Stimuli & Subjects & Accuracy \\ 
+& Signal & & & Parameters & & & in \% \\
+\hline
+\hline
+\multirow{6}{2em}{\cite{kim_emotion_2008}} & EMG & Statistical, & Linear & Joy & Music & 3, & 95 \\ 
+& ECG & Energy, & Discriminant & Anger, & & MITdatabase & (Subject\\
+& EDA & Sub band & Analysis & Sad & & & Dependent)  \\
+& RSP & Specturm & & Pleasure & & & 70 \\
+& & , Entropy & & & & & (Subject  \\
+& & & & & & & Independent) \\
+\hline
+\multirow{6}{2em}{\cite{lisetti_using_2004}} & EDA & No & KNN, & Sadness, & Movies & 14 & 91.7 \\
+& HR & specific & Discriminant & Anger, & & & (Subject \\
+& ST & features & Function & Fear, & & &Dependent)\\
+& & stated & Analysis & Surprise, & & &\\
+& & & Marquardt & Frustration, & & &\\
+& & & backpropagation & Amusement & & &\\
+\hline
+\multirow{5}{2em}{\cite{kanade_emotion_2004}} & EMG & Running mean & NN & Arousal & IAPS & 1 & 95.58 Arousal \\
+& EDA & Running & & Valance & (Visual & & 89.93 Valence \\
+& BVP & standard & & & Affective & & (Subject \\
+& ECG & deviation & & & Picture & & Dependent) \\
+& RSP & slope & & & System) & & \\
+\hline
+\multirow{2}{2em}{\cite{wan_wen_2009}} & ECG & Fast & Tabu & Joy, & Movies & 154 & 86 (Subject \\
+& & Fourier & Search & Sadness & & & Independent) \\
+\hline
+\multirow{2}{2em}{\cite{de_santos_sierra_stress-detection_2011}} & EDA & No specific & fuzzy & Stress & Hyperventilation & 80 & 99.5 (Subject \\
+& HR & features stated & logic & & Talk preparation & & Independent) \\
+\hline
+\multirow{6}{2em}{\cite{kordic_emotion_2010}} & BVP & Statistical & SVM, & amusement, & IAPS & 10 & 90 \\
+& EMG & Features & Fischer & Contentment, & & & (Subject \\
+& ST & & LDA & Disgust, & & & \\
+& EDA & & & Fear, & & & \\
+& RSP & & & Sad, & & & \\
+& & & & Neutral & & & \\
+\hline
+\multirow{6}{2em}{\cite{grimm_bimodal_2007}} & EMG & Statistical & KNN & Arousal, & Quiz & 3 & 92 \\
+& EDA & Features, & & Valance & dataset & & (Subject \\
+& ECG & BRV, & & & & & Dependent) \\
+& BVP ST & Zero-crossing, & & & & & 55 \\
+& RSP & MFCCs & & & & & (Subject \\
+& SPEECH & & & & & & Independent) \\
+\hline
+\multirow{6}{2em}{\cite{kulic_affective_2007}} & EDA & No specific & HMM & Arousal, & Robot & 36 & 81  \\
+& HR & features & & Valance & Actions & & (Subject \\
+& EMG & stated & & & & & Dependent) \\
+& & & & & & & 55\\
+& & & & & & &  (Subject \\
+& & & & & & & Independent)\\
+\hline
+\multirow{4}{2em}{\cite{schulze_cnn_2016}} & EDA & Statistical & CNN & Arousal, & Movies & 10 & 82.35 \\
+& ECG & features & & Valance & & & (Subject \\
+& ST & average power & & & & & Independent) \\
+& & SCL SCR & & & & & \\
+\hline
+\multicolumn{8}{| c |} {EMG: Electromyography; ECG: Electrocardiography; EDA: Electrodermal Activity; RSP: Respiration; ST: Skin } \\
+\multicolumn{8}{| c |} {Temperature; EEG: Electroencephalogram; BVP: Blood Volume Pulse; HR: Heart Rate; KNN: k-nearest neighbors algorithm;} \\
+\multicolumn{8}{| c |} {SVM: Support vector machine; HMM: Hidden Markov Model; ANN: Artificial Neural Network; CNN: Cellular Neural Network.} \\
+\hline
+\end{tabular}}
+\captionof{table}{Literature review of emotion recognition using physiological signal}
+\label{tab:lr_emotional recognition}
+\end{center}
+
+\paragraph{} \citeauthor{w_wen_2014} \cite{w_wen_2014} \cite{wan_wen_2009} and \citeauthor{koelstra_deap:_2012} \cite{koelstra_deap:_2012} utilized short movies as stimuli in their study. \citeauthor{wan_wen_2009} performed their study by collecting Electrocardiogram (ECG) data on 154 college students by subjecting them to sad and joyful movie clips. They then used tabu search to determine the set of Electrocardiogram (ECG) features that influence the emotion of joy or sadness. The authors were able to determine the emotion with accuracy of about 83\% for emotion of joy and 87\% for sadness.
+
+\citeauthor{koelstra_deap:_2012}'s study created a database of 32 participants. In which participants watched and rated their emotions on the scale of arousal, valance, and dominance while watching 40 music videos. The authors found significant correlations between the participant's ratings and EEG frequencies \cite{koelstra_deap:_2012}. 
+
+\section{Research Gap} One thing that we found common among all the studies we reviewed was that the studies focus on discrete emotion elicited by the stimuli. Most studies which included movie clips or short movies were selected in order to induce a preconceived emotion on to the user. Secondly, all the studies focus more on understanding the emotion of the user and not so much determining the stimuli being induced. For example, finding a pattern in the physiological data collected while the stimuli is induced. To better understand this we reviewed another study done in a completely different domain explained in the following paragraph.
+
+\paragraph{} In their study, \citeauthor{greveler_multimedia_nodate} \cite{greveler_multimedia_nodate} utilized electric consumption data from smart meter to determine what movie was being played on the television. The change in brightness levels of television affects power consumption. Thus the authors were able to create a power profile (power consumption baseline) for a movie. Inspired by this idea, we believe that a physiological profile can be created for an audiovisual content such that given physiological data of the user we can determine the user's viewing activity.
+
+\section{Privacy} \blockquote{Privacy and protection of personal information support autonomy, self-determination, and dignity} \cite{hurley_taking_2014}. Several privacy issues have been raised surrounding wearable devices. As we have already discussed in Chapter \ref{chapter:introduction}, the accelerometer data collected by fitness tracker was used by Fitbit in 2011 to determine the user's sexual activity and the information was made public \cite{Fitbit}. Many companies use the data collected by fitness trackers and sell it to the third party as a business deal or for monetary profits \cite{ever_step_you_fake}. These data sharing policies can have far-reaching consequences. As explained by \citeauthor{montgomery_health_nodate} in absence of adequate privacy policies the patients could face serious risk and be subjected to discrimination and other harms. The healthcare industry can discriminate and deny insuring people with preexisting condition \cite{montgomery_health_nodate}. Thus companies manufacturing wearable devices have a moral obligation to protect user's personal information.
+
+\paragraph{} Keeping in perspective the lacking research in determining the stimuli using the physiological data of the user and the privacy aspect of the physiological data. In this thesis, we collected the physiological data, Electrocardiogram (ECG) and Electrodermal Activity (EDA) of the user's while they are watching the short movies. We try to understand if the short movie being watched by the user can be determined to give the physiological data.
+
+

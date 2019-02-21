@@ -33,6 +33,8 @@
 \lstset{language=C,numbers=left}
 \usepackage{longtable}
 \usepackage{multicol}
+\usepackage{csquotes}
+
 
 
 %% Specify thesis parameters here
@@ -41,11 +43,11 @@
 \university  {Saarland University}{http://www.uni-saarland.de/}
 \department  {Department of Computer Science}{http://www.cs.uni-saarland.de/}
 \group       {juris-Stiftungsprofessur für Rechtsinformatik}{https://www.uni-saarland.de/lehrstuhl/sorge.html}
-\faculty     {Faculty of Natural Sciences and Technology I}{http://www.uni-saarland.de/en/campus/faculties/faculties/faculty-6-natural-sciences-and-technology-i.html}
+\faculty     {juris-Stiftungsprofessur für Rechtsinformatik}{https://www.uni-saarland.de/lehrstuhl/sorge.html}
 \supervisor  {Prof. Dr. Christoph Sorge}
 \advisor     {Aljoscha Dietrich, M.Sc.}
 \examiner    {Prof. Dr. Christoph Sorge}
-\secondexaminer {Aljoscha Dietrich, M.Sc.}
+\secondexaminer {Dr. Mario Fritz}
 \degree      {Master of Science}
 \thesiskind  {Master Thesis}
 \authors     {Gautam Sawala}
@@ -161,8 +163,10 @@ Thx Mom+Dad $<3$
 
 \loadchapter{Introduction}{Introduction}
 \loadchapter{Motivation}{Motivation}
-\loadchapter{Terminology}{Terminology}
+\loadchapter{Terminology}{Terminology and Significance}
+\loadchapter{Related_Work}{Related Work}
 \loadchapter{Data_Collection}{Data Collection}
+\loadchapter{Evaluation}{Evaluation and Results}
 
 
 
@@ -202,5 +206,9 @@ Thx Mom+Dad $<3$
 \bibliography{Bibliography}  % The references (bibliography) information are stored in the file named "Bibliography.bib"
 
 \beginappendix %Begins the appendix
-\loadappendix{Appendix}{This is my appendix}
+\appendix
+\loadchapter{AppendixA}{Consent Form}
+%%\loadappendix{Appendix}{Consent Form}
+\appendix
+\loadchapter{AppendixB}{Questionnaire}
 \end{document}  % The End

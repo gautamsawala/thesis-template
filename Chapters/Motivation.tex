@@ -1,9 +1,61 @@
 %!TEX root = ../Thesis.tex
+\label{chapter:motivation}
 \paragraph{}
-A significant amount of research conducted by Picard et al. at the Massachusetts Institute of Technology (MIT) Laboratory, showing that certain affective states may be recognized by using physiological data.\cite{picard_toward_2001}. Thus, implying that our emotions affect physiological state of our body.
+As we discussed in the chapter \ref{chapter:introduction}, a lot can be said about a user's health, activity and state of mind using physiological data. We now delve into how the physiological data can be utilized to understand the user's emotional state using modern machine learning method. We also take a look at how security and privacy of the physiological data is critical given the expected innovation in semiconductor technology. Thus, our goal is to understand how the physiological data can be exploited to understand a user's activity.
+
+\todo{Forward reference ECG and EDA}
+\paragraph{Emotion Recognition} There has been growing interest in understanding the emotions of an individual using the physiological signals since the turn of the century. \citeauthor{kim_emotion_2004}, designed an user-independent system to identify the emotion of an individual using physiological signals. They utilized Electrocardiogram (ECG), skin temperature variation and Electrodermal Activity (EDA) as physiological signals. The system consisted of preprocessing, feature extraction and pattern classification using stages. Using Support Vector Machines as pattern classifier the system was able to classify the emotions with an accuracy of 78.4\% and 61.8\%, for three and four different categories of emotions (Sadness, Anger, Stress, Surprise) \cite{kim_emotion_2004}.
+
+\paragraph{Inspiration} The high performance of machine learning approaches for recognizing human emotion has opened new avenues into a variety of applications like driver assisted systems, smart homes, and medical environments \cite{ali_globally_2018}. A lot can be determined about individuals health, activity and state of mind using machine learning approaches. Making the privacy of the physiological data all the more important.
+
+\paragraph{The Reason} Smartwatches and fitness trackers have two main advantage. Their mount location and their continual connection to the skin. This enables continuous recording of heart rate (HR), heart rate variability (HRV), temperature, blood oxygen, and electrodermal activity (EDA). With increasing demand in the mHealth\footnote{\textit{mHealth or mobile
+health as medical and public health practice supported by mobile devices, such as mobile phones, patient monitoring devices, personal digital assistants (PDAs), and other wireless devices} \cite{who_global_observatory_for_ehealth_mhealth:_2011}.} sector and developments in semiconductor technology the future smartwatches and fitness trackers, would be capable of hosting more bio-sensors and take more accurate measurements. Given the potential of smartwatches to sense and record individuals behavior and physiological response, maintaining the privacy of the information is a research challenge \cite{rawassizadeh_wearables:_2014}.
+
+\paragraph{Security and Privacy} As we have seen above the physiological data can be utilized for identifying several aspects of the user's health and activity. Given the sensitivity of the physiological data, the security of data and the privacy of the users becomes a major concern. A 2014 study conducted by \citeauthor{paul2014privacy} investigated the privacy policy of four popular fitness trackers, Fitbit, Jawbone, Nike+, and BASIS to determine the extent to which these services protect users privacy. It was found that the privacy policies of these services did not fall within the legislation regarding the privacy of health data. The comparison of the privacy policies of these services is shown in Table \ref{tab:privacy_policy_trackers} \cite{paul2014privacy}.
+
+\begin{center}
+\resizebox{\textwidth}{!}{\begin{tabular}{ |c|c|c|c|c| }
+\hline
+   & Fitbit & Jawbone & Nike & BASIS \\
+\hline
+ Usable offline without uploading data to server & No  & No  & No  & No   \\
+\hline
+ Makes no commercial use of user data & No  & Yes  & Yes  & No   \\
+\hline
+ User retains control of, and rights to their own data & No  & Yes  & Yes  & No   \\
+\hline
+ Notices users of any privacy policy changes & No  & No  & No  & No   \\
+\hline
+ Offers EU-US Safe Harbor protection & Yes  & No  & Yes  & No   \\
+\hline
+ Will not gather information about user from other sources & Yes  & No  & No & Yes  \\
+\hline
+ Policy allows for staff to view user data & No  & No  & No & Yes  \\
+\hline
+ Doesn't prohibit incomplete or pseudo-anonymous registration data & No  & Yes & Yes & No \\
+\hline
+ No provision for logging of user GPS location & No  & No & No & Yes \\
+\hline
+ Permits complete data removal & No  & No & Yes & No \\
+\hline
+ States encryption is used to protect user data & Yes & No & Yes & No \\
+\hline
+\hline
+ Overall privacy score (/11) & 3 & 3 & 6 & 3 \\
+\hline
+\end{tabular}}
+\captionof{table}{Comparison of privacy policies of fitness trackers \cite{paul2014privacy}}
+\label{tab:privacy_policy_trackers}
+\end{center}
+
 \paragraph{}
-J Kim et al. designed a physiological signal-based emotion recognition system. The user-independent takes in Electrocardiogram (ECG), Skin Temperature (ST) variation and Electrodermal Activity (EDA) and were able to achieve 78.4\% and 61.8\% for the recognition of three and four categories of emotions, respectively.\cite{kim_emotion_2004}
-\paragraph{} 
-Emotions in an individual are induced by external stimuli. There is fair amount research done on understanding emotions of an individual based on physiological data. However, there is significant lack of research to determine the stimuli causing the emotion based on the physiological data.
-\paragraph{}
-Our goal is to understand if we can determine the stimuli, in our case the short movies, based on the raw physiological data, which today’s wearable devices collect. Being able to determine the stimuli based on the physiological data, opens an entirely new avenue into privacy concern.
+Loosely framed privacy policies can have far-reaching consequences. In 2011, Fitbit was heavily criticized for tracking user’s sexual activity and making it available over the user’s public profile on its online platform which could be easily found with a simple Google search \cite{Fitbit}. Fitbit was able to determine the user’s sexual activity using the accelerometer in the devices. The physiological data is way more personal. This begs for a very important question. What can be determined about the user’s activity and psychological state with the availability of physiological data?
+
+\paragraph{The Goal} In this thesis we try to understand if there exists a correlation between the user's physiological data and their viewing activity. We take into consideration short movies. We wish to identify a movie being watched by an individual, given their physiological data.
+
+\paragraph{The Methodology} \label{sec:the_methodology} We collected Electrocardiogram (ECG) and Electrodermal Activity (EDA) data from 78 subjects. The subjects were asked to watch short movies while their physiological data was recorded. Thereafter, the subject-independent features from collected physiological data of the individuals were extracted. We then try to determine if the machine learning and deep algorithms help us classify the movies based on the extracted features of physiological data.
+
+\paragraph{The Objective} Can the user's viewing activity be determined by knowing their physiological data?
+
+\paragraph{The Purpose} The purpose of the study is to understand the privacy implications of physiological data being utilized to influence the user's behavior.
+

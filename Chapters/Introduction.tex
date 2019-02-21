@@ -1,22 +1,57 @@
 %!TEX root = ../Thesis.tex
-\paragraph{}
-The steady growth of fitness and health conscious consumers has urged many companies to take note of wearables industry. The shipments of global wearable devices are expected to grow 55\% by 2022.\cite{WearableStudy} Most of which are expected to be smart-watches and wrist-worn fitness trackers. To lure the consumer companies are urged to innovate. Enabling consumers to monitor their personal health more closely.
+\label{chapter:introduction}
+Privacy and security have always been the center of attention when it comes to technological innovation. Both privacy and security of users are important factors for technology to be sustainable. However, that is not the case. In this chapter, we discuss what are wearable devices and their significance in the 21st century. We also briefly define what is physiological data? and their benefits in health, sports and training, and marketing and advertisement. In the next chapter, we will take a look at security and privacy issues surrounding wearable devices with some examples. 
+
+\paragraph{Wearable Devices}
+Wearable devices can be worn or mated with human skin to continuously and closely monitor an individual’s activities, without interrupting or limiting the user’s motions \cite{gao_fully_2016}. These devices can perform sophisticated tasks such as biofeedback and tracking of physiological data \cite{noauthor_wearable_nodate}.
+
+\paragraph{Growth} The steady growth of fitness and health-conscious consumers has driven the innovation in wearable devices. The wearable industry is estimated to be worth \$19.63 billion \cite{noauthor_wearable_market_nodate}. The shipments of global wearable devices are expected to grow by 55\% by 2022 \cite{WearableStudy} with worth of \$57.63 billion \cite{noauthor_wearable_market_nodate}. The most popular of which are smart watches and fitness trackers as visualized in Figure \ref{fig:forecast_of_wearable_devices}.
+
 \begin{figure}
-	\centering
-	\includegraphics[width=100mm]{wearable_device_forecast.jpg}
-	\caption{Forecast of Wearable Devices 2018-2022}
-	\label{fig:forecast_of_wearable_devices}
+    \centering
+    \includegraphics[width=100mm]{wearable_device_forecast.jpg}
+    \caption{Forecast of Wearable Devices 2018-2022 \cite{WearableStudy}}
+    \label{fig:forecast_of_wearable_devices}
 \end{figure}
-\paragraph{}
-Apple introduced Electrocardiogram (ECG) feature in Apple Watch Series 4 on September 12, 2018. It is evident that companies are now looking beyond fitness tracking by enabling users to monitor their health with consumer end wearable devices, which was once only possible with high-end medical devices.
-\paragraph{}
-The inception of health monitoring is sure to open new avenues in recording more complex physiological information with higher accuracy. A study conducted by C. McCarthy et. al. found that the Empatica's E4 portable Photoplethysmogram (PPG) almost on par with the clinician standard device for atrial fibrillation diagnosis. \cite{7508621}
-\paragraph{}
-Vivid physiological signals like Electrocardiogram (ECG), Electrodermal Activity (EDA), Photoplethysmogram (PPG), Skin Temperature, Blood Pressure etc. in consumer grade wearable devices enables availability of instant health data. While this has enormous health benefits, it also raises several privacy concerns.
-\paragraph{}
-The wearable devices connect to several mobile application which provide for easy monitoring of physiological data. As the users of the wearable devices and mobile applications the consumers are often contributing to centralized database maintained by these companies. While advertising, “we respect your privacy”. The privacy policies of the companies are often misguided with confusing wordings like “we \textit{may} share your information with third party providers.”
-\paragraph{}
-The consequences of such critical data being handed over to companies are far reaching. In 2011, Fitbit was heavily criticized for tracking user’s sexual activity and making it available over the user’s public profile on its online platform which could be easily found with a simple Google search.\cite{Fitbit} Fitbit was able to determine user’s sexual activity using accelerometer in the devices. The physiological information is way more personal.
-This begs for a very important question. What can be determined about the user’s activity and psychological state with availability of physiological information.
-\paragraph{}
-In this thesis we try to determine if we can predict viewing activity of a user based on their physiological data. We consider Electrocardiogram (ECG) and Electrodermal Activity (EDA) as determiner. We took into consideration 10 short movies ranging from three minutes to twelve minutes, spread across comedy, horror, romantic, thriller and action movies. We collected data of 20 subjects for each movie of which 17 were used to train the data and 3 were used to test our model. 
+
+
+\paragraph{Fitness Trackers}
+Fitness trackers are wearable devices that are focused on monitoring physical activities for healthcare. Fitness trackers are designed to be worn all day and track steps and physical activities of the users. Table \ref{tab:data_wearable_devices} shows an overview of data managed by the fitness trackers \cite{mendoza_assessment_2018}. While the range of physiological data collected by the fitness trackers is limited measuring floors, steps, heart rate, and sleep quality, the innovation in semiconductor technology in recent years has enabled the development of sensors. The sensors which can measure other vital physiological data are now closer to realization \cite{haghi_wearable_2017}. 
+
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+\hline
+Data Type & Basic Attributes & Additional Attribute \\
+\hline
+\multirow{5}{8em}{Personal data} & Gender & Food log \\ 
+& Age & Water log \\ 
+& Date of Birth & Location \\ 
+& Height & Profile photos \\ 
+& Weight & Alarms \\ 
+\hline
+\multirow{1}{8em}{Contact info} & email & Contacts \\
+\hline
+\multirow{4}{8em}{Activity Data} & Steps &  \\
+& Floors & \\
+& Heart rate & \\
+& Sleep quality & \\
+\hline
+\multirow{3}{8em}{Device info} & Battery level & \\
+& Sync time & \\
+& App info & \\
+\hline
+\end{tabular}
+\captionof{table}{Data collected by fitness trackers \cite{mendoza_assessment_2018}}
+\label{tab:data_wearable_devices}
+\end{center}
+
+ \paragraph{Physiological Data} Physiology is a discipline of biology which deals with the study of the functioning of living organisms, animal or plant, and of the functioning of their constituent tissues or cells \cite{scheer_physiology_nodate}. Direct measure of physiological changes in users can provide insight into a user's cognitive and emotional state \cite{benbasat_incorporating_nodate}. These physiological measures include Electroencephalogram (EEG) alpha and beta, Electrodermal Activity (EDA), heart rate, and heart rate variability which have been found to relate to the ability of cogitative learning (function based on how a person processes and reasons information) \cite{leger_neurophysiological_2014}.
+ 
+\paragraph{Health Benefits} Having access to users physiological data has enormous health benefits. It can help diagnose several medical conditions including multiple sclerosis (MS) a multifactorial demyelinating disease of the central nervous system \cite{sparaco_role_2018}, atrial fibrillation (AFib) a heart condition \cite{nemati_monitoring_2016}, sleep apnea, hypertension \cite{tison_geoffrey_h_abstract_2017} etc.
+
+\paragraph{Sports and Training} The study of the effect of exercise on physiology can be traced back to 1877, in the book \textit{The Principles and Practices of Medicine}. Author and pioneer physician-scientist Austin Flint, Jr., M.D. discussed the influence of posture and exercise on pulse rate and influence of activity on respiration \cite{mcardle_essentials_2006}. Since then, researchers have tried to understand the consequences of exercise and training on the cardiovascular system using heart rate variability (HRV), aortic blood pressure variability (BPV) etc \cite{aubert_heart_2003}. The study conducted by \citeauthor{vesterinen_individual_2016}, the subjects undergoing HRV-guided training showed significant improvement in fitness over the predefined training \cite{vesterinen_individual_2016}. Thus, it is clear that fitness trackers will have a significant role to play in sports and training.
+
+\paragraph{Marketing and Advertisement} The relation of physiological response to the television commercials was first studied by \citeauthor{522761019710201} by measuring EEG of the subject \cite{522761019710201}. The study was criticized as it failed to explain what was being measured in marketing terms. For example, marketing scholars criticized that the ratio between alpha and beta waves was used to indicate arousal in the subjects, however, it wasn't clear if this was due to the effective response due to the advertisement being shown or a complex cognitive state due to internal physiology of the body \cite{1907543419840330}. The advances in neuroimaging in the past few decades have again sparked interest in understanding consumer behavior. Hence giving birth to a new communication marketing field called \textit{neuromarketing} \cite{ait_hammou_contributions_2013}. Researchers are now trying to understand how emotions induced by advertisements influence the EDA and ECG. \cite{baraybar-fernandez_evaluation_2017}. Though there are no conclusive results yet regarding the relation between advertisements and physiological data like EDA and ECG. The popularity of smartwatches and fitness trackers and their ability to gather accurate physiological data round the clock would attract many neuromarketing researcher's attention.
+
+
+\todo{Write what did we do, how many subjects were involved, what is the expected outcome, etc.}
