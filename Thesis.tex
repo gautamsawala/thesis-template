@@ -5,7 +5,7 @@
 %% ---------------------------------------------------------------- 
 
 % Set up the document
-\documentclass[a4paper, 12pt, twoside, openany]{Thesis}  % Use the "Thesis" style defined in Thesis.cls
+\documentclass[a4paper, 12pt, twoside]{Thesis}  % Use the "Thesis" style defined in Thesis.cls
 \graphicspath{{./Figures/}}  % Location of the graphics files (set up for graphics to be in PDF format)
 \setchapterpath{./Chapters/}
 \setappendixpath{./Appendices/}
@@ -34,7 +34,8 @@
 \usepackage{longtable}
 \usepackage{multicol}
 \usepackage{csquotes}
-
+\usepackage{url}
+\def\UrlBreaks{\do\/\do_/\do-}
 
 
 %% Specify thesis parameters here
@@ -48,7 +49,7 @@
 \advisor     {Aljoscha Dietrich, M.Sc.}
 \examiner    {Prof. Dr. Christoph Sorge}
 \secondexaminer {Dr. Mario Fritz}
-\degree      {Master of Science}
+%%\degree      {Master of Science}
 \thesiskind  {Master Thesis}
 \authors     {Gautam Sawala}
 \thesistitle {Privacy implications of wearable devices - identification of short movies utilizing physiological data}
@@ -67,14 +68,14 @@
 %\revision{\input{|"git rev-parse HEAD | cut -c 1-8"}}
 
 \begin{document}
-\frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
-
+\pagenumbering{gobble}
+\pagestyle{plain}
 %% Title Page
 %% ----------------------------------------------------------------
 \maketitle
-
 %% Declaration Page required for the Thesis, your institution may give you a different text to place here
 %% ----------------------------------------------------------------
+\frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
 \doifnotproposal{
 \begin{declaration}
   \begin{center}
@@ -134,8 +135,18 @@
 %% The Acknowledgements page, for thanking everyone
 %% ----------------------------------------------------------------
 \begin{acknowledgements}
-
-Thx Mom+Dad $<3$
+\textit{It's been a long journey, nevertheless it’s been a memorable one.}
+\paragraph{}
+I am enterally grateful to \textbf{Prof. Dr. Christoph Sorge}, for allowing me to do my masters thesis at his chair juris-Stiftungsprofessur f\"{u}r Rechtsinformatik, Universit\"{a}t des Saarlandes. His valuable inputs have helped me at every step in completing my thesis research. I also thank \textbf{Dr. Mario Fritz} for accepting to serve as a second examiner for my thesis.
+\paragraph{}
+My research would have been impossible without aid and support of my thesis guide \textbf{Mr. Aljoscha Dietrich}. It was his ideas that resulted in inception of this thesis and his suggestions have been indispensable asset throughout. I could not have imagined having a better advisor. I would miss the lengthy discussions we have had during the course of the thesis.
+\paragraph{}
+I also thank staff at \textbf{CISPA− Helmholtz-Zentrum GmbH} for providing facilities for data collection and resolving server issues during the thesis.
+\paragraph{}
+A special thanks to \textbf{Mr. Dominik Steiger} and \textbf{Mr. Gautam Gala} for meticulously reviewing my thesis. Their feedback was invaluable. I also thank my dearest friend \textbf{Mr. Santosh Nayak} and his girlfriend \textbf{Ms. Kim Tendick} who always pushed me to perform better and been an emotional support. \textbf{Mr. Divyam Saran} for his inputs on machine learning. My heartfelt gratitude to \textbf{Mr. Bj\"{o}rn Lang} and \textbf{Mr. Ralf Kiehne} for helping me make my studies a priority over work. 
+\paragraph{}
+I would be failing in my duty if I do not acknowledge the sacrifices made by my parents, \textbf{Mr. Shailesh Sawala} and \textbf{Mrs. Aruna Sawala}, my brother \textbf{Mr. Hardik Sawala} and sister-in-law \textbf{Mrs. Khushbu Sawala}. They have been pillar of strength and have been unseen force behind my success at every stage of my life. 
+ 
 
 \end{acknowledgements}
 \cleardoublepage
@@ -149,10 +160,10 @@ Thx Mom+Dad $<3$
 
 %% The Dedication page
 %% ----------------------------------------------------------------
-\doifnotproposal{
-  \thispagestyle{empty}  % Page style needs to be empty for this page
-  \dedicatory{Dedicated to WHATEVER.}
-}
+%%\doifnotproposal{
+%%  \thispagestyle{empty}  % Page style needs to be empty for this page
+%%  \dedicatory{Dedicated to WHATEVER.}
+%%}
 
 \mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
 
@@ -212,4 +223,6 @@ Thx Mom+Dad $<3$
 %%\loadappendix{Appendix}{Consent Form}
 \appendix
 \loadchapter{AppendixB}{Questionnaire}
+\appendix
+\loadchapter{AppendixC}{Self Assessment of Emotions}
 \end{document}  % The End

@@ -1,21 +1,22 @@
 %!TEX root = ../Thesis.tex
 \label{chapter:motivation}
 \paragraph{}
-As we discussed in the chapter \ref{chapter:introduction}, a lot can be said about a user's health, activity and state of mind using physiological data. We now delve into how the physiological data can be utilized to understand the user's emotional state using modern machine learning method. We also take a look at how security and privacy of the physiological data is critical given the expected innovation in semiconductor technology. Thus, our goal is to understand how the physiological data can be exploited to understand a user's activity.
+As we discussed in the chapter \ref{chapter:introduction}, a lot can be said about a user's health, activity and state of mind using physiological data. We now delve into how the physiological data can be utilized to understand the user's emotional state using modern machine learning methods. We also take a look at how security and privacy of the physiological data is critical given the expected innovation in semiconductor technology. Thus, our goal is to understand how the physiological data can be exploited to understand a user's activity.
 
-\paragraph{Emotion Recognition} There has been growing interest in understanding the emotions of an individual using the physiological signals since the turn of the century. \citeauthor{kim_emotion_2004}, designed an user-independent system to identify the emotion of an individual using physiological signals. They utilized Electrocardiogram (ECG), skin temperature variation and Electrodermal activity (EDA) as physiological signals. The system consisted of preprocessing, feature extraction and pattern classification using stages. Using Support Vector Machines as pattern classifier the system was able to classify the emotions with an accuracy of 78.4\% and 61.8\%, for three and four different categories of emotions (Sadness, Anger, Stress, Surprise) \cite{kim_emotion_2004}.
+\paragraph{Emotion Recognition} There has been growing interest in understanding the emotions of an individual using the physiological signals since the turn of the century. \citeauthor{kim_emotion_2004}, designed an user-independent system to identify the emotion of an individual using physiological signals. They utilized Electrocardiogram (ECG), skin temperature variation and Electrodermal activity (EDA) as physiological signals. The system consisted of preprocessing, feature extraction and pattern classification using stages. Using Support Vector Machines as a pattern classifier the system was able to classify the emotions with an accuracy of 78.4\% and 61.8\%, for three and four different categories of emotions (Sadness, Anger, Stress, Surprise) \cite{kim_emotion_2004}.
 
 \paragraph{Inspiration} The high performance of machine learning approaches for recognizing human emotion has opened new avenues into a variety of applications like driver assisted systems, smart homes, and medical environments \cite{ali_globally_2018}. A lot can be determined about individuals health, activity and state of mind using machine learning approaches. Making the privacy of the physiological data all the more important.
 
-\paragraph{The Reason} Smartwatches and fitness trackers have two main features. Their mount location and their continual connection to the skin. This enables continuous recording of heart rate (HR), heart rate variability (HRV), temperature, blood oxygen, and EDA. With increasing demand in the mHealth\footnote{\textit{mHealth or mobile
+\paragraph{The Reason} Smartwatches and fitness trackers have two main features. Their mount location and their continual connection to the skin. This enables continuous recording of heart rate (HR), heart rate variability (HRV), temperature, blood oxygen, EDA and other physiological signals. With increasing demand in the mHealth\footnote{\textit{mHealth or mobile
 health as medical and public health practice supported by mobile devices, such as mobile phones, patient monitoring devices, personal digital assistants (PDAs), and other wireless devices} \cite{who_global_observatory_for_ehealth_mhealth:_2011}.} sector and developments in semiconductor technology the future smartwatches and fitness trackers, would be capable of hosting more bio-sensors and take more accurate measurements. Given the potential of smartwatches to sense and record individuals behavior and physiological response, maintaining the privacy of the information is a research challenge \cite{rawassizadeh_wearables:_2014}.
 
-\paragraph{Security and Privacy} As we have seen above, the physiological data can be utilized for identifying several aspects of the user's health and activity. Given the sensitivity of the physiological data, the security of data and the privacy of the users becomes a major concern. A 2014 study conducted by \citeauthor{paul2014privacy} investigated the privacy policy of four popular fitness trackers, Fitbit, Jawbone, Nike+, and BASIS to determine the extent to which these services protect users privacy. It was found that the privacy policies of these services did not fall within the legislation regarding the privacy of health data. The comparison of the privacy policies of these services is shown in table \ref{tab:privacy_policy_trackers}. Higher the score the better the privacy of the fitness tracker. \cite{paul2014privacy}.
+\paragraph{Security and Privacy} As we have seen above, the physiological data can be utilized for identifying several aspects of the user's health and activity. Given the sensitivity of the physiological data, the security of data and the privacy of the users becomes a major concern. A 2014 study conducted by \citeauthor{paul2014privacy} investigated the privacy policy of four popular fitness trackers, Fitbit, Jawbone, Nike+, and BASIS to determine the extent to which these services protect users privacy. It was found that the privacy policies of these services did not fall within the legislation regarding the privacy of health data. The comparison of the privacy policies of these services is shown in table \ref{tab:privacy_policy_trackers}. The higher the score the better the privacy of the fitness trackers. \cite{paul2014privacy}.
 
 \begin{center}
 \resizebox{\textwidth}{!}{\begin{tabular}{ |c|c|c|c|c| }
 \hline
-   & Fitbit & Jawbone & Nike & BASIS \\
+   & \textbf{Fitbit} & \textbf{Jawbone} & \textbf{Nike} & \textbf{BASIS} \\
+\hline
 \hline
  Usable offline without uploading data to server & No  & No  & No  & No   \\
 \hline
@@ -43,7 +44,7 @@ health as medical and public health practice supported by mobile devices, such a
  Overall privacy score (/11) & 3 & 3 & 6 & 3 \\
 \hline
 \end{tabular}}
-\captionof{table}{Comparison of privacy policies of fitness trackers \cite{paul2014privacy}}
+\captionof{table}{Comparison of privacy policies of fitness trackers \cite{paul2014privacy}.}
 \label{tab:privacy_policy_trackers}
 \end{center}
 
@@ -56,5 +57,5 @@ Loosely framed privacy policies can have far-reaching consequences. In 2011, Fit
 
 \paragraph{The Objective} Can the user's viewing activity be determined by knowing their physiological data?
 
-\paragraph{The Purpose} The wearable devices of future would be capable of recording high quality vital physiological data of the user. These tools can be misused to breach user's privacy. The purpose of the study is to understand the privacy implications of physiological data being utilized to influence the user's behavior.
+\paragraph{The Purpose} The wearable devices of the future would be capable of recording high quality vital physiological data of the user. These tools can be misused to breach the user's privacy. The purpose of the study is to understand the privacy implications of physiological data being utilized to influence the user's behavior.
 

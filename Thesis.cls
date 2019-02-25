@@ -59,6 +59,7 @@
 \widowpenalty=9999                % Almost no widows at bottom of page.
 \clubpenalty=9999                 % Almost no orphans at top of page.
 \interfootnotelinepenalty=9999    % Almost never break footnotes.
+
 \usepackage{fancyhdr}
 \lhead[\rm\thepage]{\fancyplain{}{\sl{\rightmark}}}
 \rhead[\fancyplain{}{\sl{\leftmark}}]{\rm\thepage}
@@ -217,6 +218,7 @@
   \def\facname{\texorpdfstring{\href{#2}{#1}}{#1}}
 }
 
+
 \subject     {}
 \keywords    {}
 \renewcommand\maketitle{
@@ -230,15 +232,13 @@
     \let\footnoterule\relax
     \let \footnote \thanks
     \setcounter{footnote}{0}
-    \null\vfil
-    \vskip 60\p@
     \begin{center}
       \setlength{\parskip}{0pt}
       {\LARGE \bf \TITLE \par}
       \smallskip
       by \\
 	 
-	  {\large \textbf{\authornames} \\[1cm]}
+	  {\large \textbf{\authornames} \\[1.5cm]}
 
       {\Large \textbf{\thesisname} \\[1cm]}
 
@@ -422,6 +422,7 @@
   \fi
   \@mainmatterfalse
 }
+
 
 \endinput
 %%

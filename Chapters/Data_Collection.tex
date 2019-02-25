@@ -6,24 +6,24 @@ In this chapter, we will discuss the method and procedure used to collect physio
 As we have discussed in Chapter \ref{chapter:Terminology}, the significant physiological signals we wished to collect for the study were Electrocardiogram (ECG) and Electrodermal activity (EDA). Using currently commercially available fitness trackers like Apple Watch, Garmin Vivoactive, etc. would not suffice our experimental requirements. The aforementioned devices are not yet capable of recording high quality ECG and EDA signals. Thus, we preferred to use a biosignal acquisition device which can record high quality \textbf{raw} physiological signals. We found BITalino (r)evolution Plugged Kit BT to be the best fit for our study. There were two main reasons for choosing BITalino (r)evolution Plugged Kit BT. First, we were able to get high-resolution physiological signals (at 100Hz) and second, we presume that in future the fitness trackers would be sophisticated enough to record the signals at a higher resolution.
 \begin{figure}
 \centering
-\includegraphics[width=150mm]{Figures/bitalino.jpg}
-\caption{BITalino (r)evolution Plugged Kit BT \cite{bitalino_datasheet}}
+\includegraphics[width=140mm]{Figures/bitalino.jpg}
+\caption{BITalino (r)evolution Plugged Kit BT \cite{bitalino_datasheet}.}
 \label{fig:bitalino}
 \end{figure}
-\paragraph{BITalino (r)evolution Plugged Kit BT} BITalino is all-in-one board designed for biosignal acquisition. The main board connects with sensors, which are separate components using UC-E6 socket as shown in Figure \ref{fig:bitalino} \cite{bitalino_datasheet}. Using BITalino over other biosignal acquisition devices or fitness trackers are discussed in the following subsection,
+\paragraph{BITalino (r)evolution Plugged Kit BT} BITalino is an all-in-one board designed for biosignal acquisition. The main board connects with sensors, which are separate components using UC-E6 socket as shown in Figure \ref{fig:bitalino} \cite{bitalino_datasheet}. Using BITalino over other biosignal acquisition devices or fitness trackers are discussed in the following subsection,
 
 \subsection{Medical Expertise} Most medical grade devices require technical expertise and knowledge of anatomy to configure and operate. Moreover, high-end medical devices are expensive and time-consuming to operate. Thus, we decided on to highly versatile and easy to operate framework, BITalino.
 
 \subsection{Quality of Data} When it comes to biosignal acquisition there are strict terms in regards to signal parameters. While converting from analog to digital signals, the instrumentation is required to be designed with high Signal to Noise Ratio (SNR) and accurate sampling rate. BITalino enables high accuracy conversion of analog to digital signals \cite{guerreiro_performance_2014}.
 
-\subsection{Availability of data} BITalino provides a Biotech Application Programming Interface (API) which allows incorporating BITalino into custom made application software \cite{noauthor_biotech_nodate}. This allowed us to design application software suited to our data acquisition requirements. We designed an application that is capable of acquiring data from six BITalino devices over the Bluetooth. Since each device has four ports (see section \ref{design_principles}), we were able to record ECG and EDA data from 12 subjects simultaneously. The details of application are discussed in Section \ref{sec:custom_int}. The Application Programming Interface (API) also allows time synchronization between multiple devices which will be discussed in Section \ref{sec:time_sync}.
+\subsection{Availability of data} BITalino provides a Biotech Application Programming Interface (API) which allows incorporating BITalino into custom made application software \cite{noauthor_biotech_nodate}. This allowed us to design application software suited to our data acquisition requirements. We designed an application that is capable of acquiring data from six BITalino devices over the Bluetooth. Since each device has four ports (see section \ref{design_principles}), we were able to record ECG and EDA data from 12 subjects simultaneously. The details of the application are discussed in Section \ref{sec:custom_int}. The Application Programming Interface (API) also allows time synchronization between multiple devices which will be discussed in section \ref{sec:time_sync}.
 
 \section{Anatomy of BITalino}
 \subsection{Design Principles}
 \label{design_principles}
 BITalino is a 100x65x6mm chip onboard device that integrates multiple plug and play sensors to measure bio-electrical and biomechanical data. The digital back-end is supported by a control block based on ATmega328P micro-controller, and a communication block that uses a Class II Bluetooth v2.0 module for wireless data transfer to a base station (example. Computer, Mobile Phone etc) \cite{silva_bitalino:_2014}.
 
-\paragraph{} BITalino is capable of recording at 1, 10, 100 or 1000 Hz frequency. It has four 10-bit analog ports and two 6-bit analog ports which can be utilized to connect to plug and play sensors to record physiological signals of the subjects. The detailed specification of the device is listed in the Table \ref{tab:bitalino_specification} \cite{bitalino_datasheet}.
+\paragraph{} BITalino is capable of recording at 1, 10, 100 or 1000 Hz frequency. It has four 10-bit analog ports and two 6-bit analog ports which can be utilized to connect to plug and play sensors to record physiological signals of the subjects. The detailed specification of the device is listed in table \ref{tab:bitalino_specification} \cite{bitalino_datasheet}.
 
 \begin{center}
 \begin{tabular}{ |c|c| }
@@ -49,7 +49,7 @@ Consumption & approx. 64mA \\
 Accessories & 1x3-lead cable; 1x2-lead cable. \\
 \hline
 \end{tabular}
-\captionof{table}{Specification of BITalino (r)evolution Plugged Kit \cite{bitalino_datasheet}}
+\captionof{table}{Specification of BITalino (r)evolution Plugged Kit \cite{bitalino_datasheet}.}
 \label{tab:bitalino_specification}
 \end{center}
 
@@ -58,7 +58,7 @@ The ECG sensor of BITalino operates in the range of -1.5mV to +1.5mV and bandwid
 \begin{figure}
 \centering
 \includegraphics[width=100mm]{ECG.jpg}
-\caption{ECG Lead placement}
+\caption{ECG Lead placement.}
 \label{fig:ecg_lead_placement}
 \end{figure}
 \subsection{EDA Sensor}
@@ -67,7 +67,7 @@ The EDA sensor of BITalino operates between 1.8-5.5V with a bandwidth between 0-
 \begin{figure}
 \centering
 \includegraphics[width=100mm]{EDA.jpg}
-\caption{EDA Lead placement}
+\caption{EDA Lead placement.}
 \label{fig:eda_lead_placement}
 \end{figure}
 
@@ -76,15 +76,15 @@ We set on to measure ECG and EDA of the subjects. Hence, we took advantage of EC
 \paragraph{}
 To further increase the number of subjects per session we utilized multiple BITalino devices. Having multiple devices connected and being recorded from simultaneously, posed a challenge of synchronizing the devices. Time synchronization of multiple devices is discussed in Section \ref{sec:time_sync}.
 \paragraph{}
-To make sure that we had the data required is time synchronized and annotated with the correct tags, we developed a custom application utilizing BITalino API. The details of which are discussed in Section \ref{sec:custom_int}.
+To make sure that we had the data required is time synchronized and annotated with the correct tags, we developed a custom application utilizing the BITalino API. The details of which are discussed in section \ref{sec:custom_int}.
 \paragraph{}
-The BITlino is capable of recording at a maximum of 1000Hz. Recording at 1000Hz sampling rate could not be maintained when multiple devices are connected using Bluetooth. The Bluetooth seemed to be the bottleneck. We also reviewed the literature where the studies were conducted in regards to the acquisition of physiological signals. The most commonly used sampling rates were 256Hz \cite{kim_emotion_2004} \cite{kim_emotion_2008}, 400Hz \cite{w_wen_2014} and 512Hz \cite{koelstra_deap:_2012}. However, the highest possible sampling rate lower than 1000Hz was 100Hz. At 100Hz sampling rate, the connection remained stable without buffers on the BITalino device overflowing.
+The BITlino is capable of recording at a maximum of 1000Hz. Recording at 1000Hz sampling rate could not be maintained when multiple devices are connected using Bluetooth. Bluetooth seemed to be the bottleneck. We also reviewed the literature where the studies were conducted in regards to the acquisition of physiological signals. The most commonly used sampling rates were 256Hz \cite{kim_emotion_2004} \cite{kim_emotion_2008}, 400Hz \cite{w_wen_2014} and 512Hz \cite{koelstra_deap:_2012}. However, the highest possible sampling rate lower than 1000Hz was 100Hz. At 100Hz sampling rate, the connection remained stable without buffers on the BITalino device overflowing.
 
 \subsection{Time Synchronization}
 \label{sec:time_sync}
-When multiple BITalino devices were connected in parallel we noticed that the data from different devices was not time synchronized. There was a minor delay of about 190ms while recording the data from one device to another. This occurs as the BITalino devices send data which is read serially over Bluetooth. The delay occurs when the devices connected in parallel have to wait for other device to finish sending the data. Thus, there was a need for time synchronization. 
+When multiple BITalino devices were connected in parallel we noticed that the data from different devices was not time synchronized. There was a minor delay of about 190ms while recording the data from one device to another. This occurs as the BITalino devices send data which is read serially over Bluetooth. The delay occurs when the devices connected in parallel have to wait for other devices to finish sending the data. Thus, there was a need for time synchronization. 
 \paragraph{}
-We took advantage of input and output digital ports of BITalino. The devices were connected in master and slave configuration where the output of the master was connected to the input on the slave devices. Each time a sample is read from the master device, it will trigger the output which in turn will switch the input on the slave device. Thereafter, the data can be synchronized based on the output bits of the master device and input bits of a slave device. The time synchronized BITalino is shown in figure \ref{fig:time_sync_bitalino}
+We took advantage of the input and output digital ports of BITalino. The devices were connected in a master and slave configuration where the output of the master was connected to the input on the slave devices. Each time a sample is read from the master device, it will trigger the output which in turn will switch the input on the slave device. Thereafter, the data can be synchronized based on the output bits of the master device and input bits of a slave device. The time synchronized BITalino is shown in figure \ref{fig:time_sync_bitalino}
 
 \begin{figure}
 \centering
@@ -94,13 +94,13 @@ We took advantage of input and output digital ports of BITalino. The devices wer
 \end{figure}
 \subsection{Manual Denoising}
 \label{sec:denoising}
-While recording with BITalino, sometimes a static noise due to electrostatic fields is generated in both ECG and EDA. The EDA recording with noise is visualized in OpenSignals software is shown in Figure \ref{fig:eda_noisy}. We found that grounding IN+ port as shown in Figure \ref{fig:eda_denoising} denoised bot ECG and EDA signals. The denoised signal is shown in Figure \ref{fig:eda_nonnoisy}.
+While recording with BITalino, sometimes a static noise due to electrostatic fields is generated in both ECG and EDA. The EDA recording with noise is visualized in the OpenSignals software is shown in Figure \ref{fig:eda_noisy}. We found that grounding IN+ port as shown in Figure \ref{fig:eda_denoising} denoised bot ECG and EDA signals. The denoised signal is shown in Figure \ref{fig:eda_nonnoisy}.
 
 
 \begin{figure}
 \centering
 \includegraphics[width=100mm]{Figures/eda_denoising.jpeg}
-\caption{Manual Denoising using EDA Sensor}
+\caption{Manual Denoising using EDA Sensor.}
 \label{fig:eda_denoising}
 \end{figure}
 
@@ -120,7 +120,7 @@ While recording with BITalino, sometimes a static noise due to electrostatic fie
 
 \subsection{Web Application}
 \label{sec:custom_int}
-The key requirement of our experiment was  to,
+The key requirements of our experiment were: 
 \begin{itemize}
     \item Accurately collect the data from multiple BITalino devices.
     \item Tag the data with synchronization information by time log of switch bit (0 or 1) for output of master device and input of slave device.
@@ -132,8 +132,8 @@ The server-side of the interface shown in figure \ref{fig:bitalino_cc} is design
 The second feature on the server-side enables playback control of movies on the client-side using WebSockets. The server-side interface allows playing and pausing the movie on the client-side, a browser window displayed on the projector on which movies are played. Each of these actions then creates a log file with a time stamp of the action performed along with the movie name.
 \begin{figure}
 \centering
-\includegraphics[width=150mm]{bitalino_interface.JPG}
-\caption{BITalino Control Center}
+\includegraphics[width=140mm]{bitalino_interface.JPG}
+\caption{BITalino Control Center.}
 \label{fig:bitalino_cc}
 \end{figure}
 
@@ -155,7 +155,7 @@ As we have discussed in Chapter \ref{sec:emo_rec}, Mood Induction Procedures (MI
 \begin{center}
 \begin{tabular}{ |c|c|c| }
 \hline
-Movie & Genre & Run-time (mm:ss) \\
+\textbf{Movie} & \textbf{Genre} & \textbf{Run-time (mm:ss)} \\
 \hline
 \hline
 3 Versos & Horror & 13:00 \\
@@ -173,7 +173,7 @@ I Miss You & Romance & 06:42 \\
 The Most Beautiful Thing & Romance & 10:43 \\
 \hline
 \end{tabular}
-\captionof{table}{Short list of the movies selected for the study}
+\captionof{table}{Short list of the movies selected for the study.}
 \label{tab:shortlist_movies}
 \end{center}
 
